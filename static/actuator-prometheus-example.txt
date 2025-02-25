@@ -1,0 +1,171 @@
+# HELP jvm_memory_used_bytes The amount of used memory in bytes
+# TYPE jvm_memory_used_bytes gauge
+jvm_memory_used_bytes{area="heap",id="PS-Eden-Space"} 123456789.0
+jvm_memory_used_bytes{area="heap",id="PS-Survivor-Space"} 23456789.0
+jvm_memory_used_bytes{area="heap",id="PS-Old-Gen"} 345678901.0
+jvm_memory_used_bytes{area="nonheap",id="Metaspace"} 45678901.0
+
+# HELP jvm_gc_memory_promoted_bytes_total Count of positive increases in the size of the old generation memory pool before GC to after GC
+# TYPE jvm_gc_memory_promoted_bytes_total counter
+jvm_gc_memory_promoted_bytes_total 987654321.0
+
+# HELP http_server_requests_seconds Time taken to process HTTP requests
+# TYPE http_server_requests_seconds summary
+http_server_requests_seconds_count{method="GET",uri="/api/users",status="200"} 100.0
+http_server_requests_seconds_sum{method="GET",uri="/api/users",status="200"} 5.67
+http_server_requests_seconds_count{method="POST",uri="/api/orders",status="201"} 50.0
+http_server_requests_seconds_sum{method="POST",uri="/api/orders",status="201"} 3.45
+
+# HELP process_cpu_usage The recent CPU usage for the Java Virtual Machine process
+# TYPE process_cpu_usage gauge
+process_cpu_usage 0.15
+
+# HELP custom_orders_created_total Total number of orders created
+# TYPE custom_orders_created_total counter
+custom_orders_created_total 42.0
+
+# HELP custom_active_users Current number of active users
+# TYPE custom_active_users gauge
+custom_active_users 15.0
+
+# HELP custom_login_attempts_total Total number of login attempts
+# TYPE custom_login_attempts_total counter
+custom_login_attempts_total{status="success"} 120.0
+custom_login_attempts_total{status="failure"} 25.0
+
+# HELP custom_product_views_total Total number of product views
+# TYPE custom_product_views_total counter
+custom_product_views_total{product_id="123"} 500.0
+custom_product_views_total{product_id="456"} 300.0
+
+# HELP custom_cart_additions_total Total number of items added to the cart
+# TYPE custom_cart_additions_total counter
+custom_cart_additions_total{product_id="123"} 50.0
+custom_cart_additions_total{product_id="456"} 30.0
+
+# HELP custom_checkout_completions_total Total number of completed checkouts
+# TYPE custom_checkout_completions_total counter
+custom_checkout_completions_total 20.0
+
+# HELP custom_api_errors_total Total number of API errors
+# TYPE custom_api_errors_total counter
+custom_api_errors_total{endpoint="/api/users",status="500"} 5.0
+custom_api_errors_total{endpoint="/api/orders",status="400"} 3.0
+
+# HELP custom_cache_hits_total Total number of cache hits
+# TYPE custom_cache_hits_total counter
+custom_cache_hits_total{cache_name="userCache"} 1000.0
+custom_cache_hits_total{cache_name="productCache"} 750.0
+
+# HELP custom_cache_misses_total Total number of cache misses
+# TYPE custom_cache_misses_total counter
+custom_cache_misses_total{cache_name="userCache"} 50.0
+custom_cache_misses_total{cache_name="productCache"} 25.0
+
+# HELP custom_database_queries_total Total number of database queries executed
+# TYPE custom_database_queries_total counter
+custom_database_queries_total{database="main",type="select"} 200.0
+custom_database_queries_total{database="main",type="insert"} 50.0
+custom_database_queries_total{database="main",type="update"} 30.0
+
+# HELP custom_database_query_duration_seconds Duration of database queries in seconds
+# TYPE custom_database_query_duration_seconds summary
+custom_database_query_duration_seconds_count{database="main",type="select"} 200.0
+custom_database_query_duration_seconds_sum{database="main",type="select"} 12.34
+custom_database_query_duration_seconds_count{database="main",type="insert"} 50.0
+custom_database_query_duration_seconds_sum{database="main",type="insert"} 5.67
+
+# HELP custom_email_sent_total Total number of emails sent
+# TYPE custom_email_sent_total counter
+custom_email_sent_total{type="welcome"} 10.0
+custom_email_sent_total{type="order_confirmation"} 20.0
+
+# HELP custom_file_uploads_total Total number of file uploads
+# TYPE custom_file_uploads_total counter
+custom_file_uploads_total{type="image"} 15.0
+custom_file_uploads_total{type="document"} 5.0
+
+# HELP custom_file_upload_size_bytes Total size of uploaded files in bytes
+# TYPE custom_file_upload_size_bytes counter
+custom_file_upload_size_bytes{type="image"} 10485760.0
+custom_file_upload_size_bytes{type="document"} 5242880.0
+
+# HELP custom_background_jobs_total Total number of background jobs executed
+# TYPE custom_background_jobs_total counter
+custom_background_jobs_total{job_type="email_sender"} 30.0
+custom_background_jobs_total{job_type="report_generator"} 10.0
+
+# HELP custom_background_job_duration_seconds Duration of background jobs in seconds
+# TYPE custom_background_job_duration_seconds summary
+custom_background_job_duration_seconds_count{job_type="email_sender"} 30.0
+custom_background_job_duration_seconds_sum{job_type="email_sender"} 120.0
+custom_background_job_duration_seconds_count{job_type="report_generator"} 10.0
+custom_background_job_duration_seconds_sum{job_type="report_generator"} 300.0
+
+# HELP custom_external_api_calls_total Total number of external API calls
+# TYPE custom_external_api_calls_total counter
+custom_external_api_calls_total{api="payment_gateway"} 50.0
+custom_external_api_calls_total{api="shipping_service"} 20.0
+
+# HELP custom_external_api_call_duration_seconds Duration of external API calls in seconds
+# TYPE custom_external_api_call_duration_seconds summary
+custom_external_api_call_duration_seconds_count{api="payment_gateway"} 50.0
+custom_external_api_call_duration_seconds_sum{api="payment_gateway"} 25.0
+custom_external_api_call_duration_seconds_count{api="shipping_service"} 20.0
+custom_external_api_call_duration_seconds_sum{api="shipping_service"} 10.0
+
+# HELP custom_user_sessions_total Total number of user sessions
+# TYPE custom_user_sessions_total counter
+custom_user_sessions_total 1000.0
+
+# HELP custom_user_session_duration_seconds Duration of user sessions in seconds
+# TYPE custom_user_session_duration_seconds summary
+custom_user_session_duration_seconds_count 1000.0
+custom_user_session_duration_seconds_sum 36000.0
+
+# HELP custom_search_queries_total Total number of search queries
+# TYPE custom_search_queries_total counter
+custom_search_queries_total 500.0
+
+# HELP custom_search_query_duration_seconds Duration of search queries in seconds
+# TYPE custom_search_query_duration_seconds summary
+custom_search_query_duration_seconds_count 500.0
+custom_search_query_duration_seconds_sum 250.0
+
+# HELP custom_push_notifications_sent_total Total number of push notifications sent
+# TYPE custom_push_notifications_sent_total counter
+custom_push_notifications_sent_total 200.0
+
+# HELP custom_push_notification_delivery_failures_total Total number of push notification delivery failures
+# TYPE custom_push_notification_delivery_failures_total counter
+custom_push_notification_delivery_failures_total 10.0
+
+# HELP custom_social_shares_total Total number of social shares
+# TYPE custom_social_shares_total counter
+custom_social_shares_total{platform="facebook"} 100.0
+custom_social_shares_total{platform="twitter"} 50.0
+
+# HELP custom_revenue_total Total revenue generated
+# TYPE custom_revenue_total counter
+custom_revenue_total{currency="USD"} 5000.0
+
+# HELP custom_discounts_applied_total Total number of discounts applied
+# TYPE custom_discounts_applied_total counter
+custom_discounts_applied_total 100.0
+
+# HELP custom_refunds_processed_total Total number of refunds processed
+# TYPE custom_refunds_processed_total counter
+custom_refunds_processed_total 10.0
+
+# HELP custom_support_tickets_created_total Total number of support tickets created
+# TYPE custom_support_tickets_created_total counter
+custom_support_tickets_created_total 25.0
+
+# HELP custom_support_tickets_resolved_total Total number of support tickets resolved
+# TYPE custom_support_tickets_resolved_total counter
+custom_support_tickets_resolved_total 20.0
+
+# HELP custom_support_ticket_resolution_time_seconds Time taken to resolve support tickets in seconds
+# TYPE custom_support_ticket_resolution_time_seconds summary
+custom_support_ticket_resolution_time_seconds_count 20.0
+custom_support_ticket_resolution_time_seconds_sum 3600.0

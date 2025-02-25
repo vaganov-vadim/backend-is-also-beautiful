@@ -18,4 +18,4 @@
 
 Картинка для привлечения внимания :)
 
-![perfomance.png](static/perfomance.png)
+![performance.png](static/performance.png)
