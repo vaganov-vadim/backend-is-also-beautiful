@@ -141,11 +141,13 @@ done
 
 ### Метрики производительность приложения
 
-4 золотых сигнала.
+4 золотых сигнала: Latency, Traffic, Errors, Saturation.
 
 ![traffic-and-errors.png](static/traffic-and-errors.png)
 
 ![latency.png](static/latency.png)
+
+![saturation.png](static/saturation.png)
 
 ### Бизнес-метрики
 
@@ -155,7 +157,6 @@ done
 ![business.png](static/business.png)
 
 ![business-2.png](static/business-2.png)
-
 
 ```text
 Красиво - это не только про визуал.
