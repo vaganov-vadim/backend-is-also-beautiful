@@ -1,4 +1,4 @@
-package ru.vaganovvadim.backend_is_also_beautiful;
+package ru.vaganovvadim.backendisalsobeautiful;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
