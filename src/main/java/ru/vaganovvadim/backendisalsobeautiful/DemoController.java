@@ -11,27 +11,25 @@ public class DemoController {
     private final Counter errorCounter;
 
     public DemoController(MeterRegistry meterRegistry) {
-        // Counter for total requests
         this.requestCounter = Counter.builder("demo.requests")
-                                     .description("Total number of requests to the demo endpoint")
+                                     .description("Количество запросов - трафик")
                                      .register(meterRegistry);
 
-        // Counter for errors
         this.errorCounter = Counter.builder("demo.errors")
-                                   .description("Total number of errors in the demo endpoint")
+                                   .description("Количество ошибок")
                                    .register(meterRegistry);
     }
 
     @GetMapping("/demo")
     public String demo() {
-        requestCounter.increment(); // Increment request counter
+        requestCounter.increment();
 
-        // Randomly return an error (e.g., 20% chance of error)
+        // Случайно возвращаем ошибку
         if (Math.random() < 0.2) {
-            errorCounter.increment(); // Increment error counter
-            throw new RuntimeException("Random error occurred!");
+            errorCounter.increment();
+            throw new RuntimeException("Произошла серьёзная ошибка");
         }
 
-        return "Hello! This is a demo endpoint. Metrics are being recorded.";
+        return "Привет! Это демонстрационный эндпоинт";
     }
 }
