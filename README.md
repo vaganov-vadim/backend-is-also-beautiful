@@ -22,6 +22,7 @@
 
 ### Попробовать поиграться локально
 
+
 ```bash
 docker compose -f local/docker-compose.yml up
 ```
@@ -29,3 +30,11 @@ docker compose -f local/docker-compose.yml up
 ```bash
 ./gradlew bootRun
 ```
+
+```bash
+for i in $(seq 1 1000); do
+  curl -sS -o /dev/null http://localhost:8080/demo
+done
+```
+
+Открыть http://localhost:3000
