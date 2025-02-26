@@ -1,4 +1,5 @@
 spring.application.name: backend-is-also-beautiful
+server.port: 8080
 management:
   endpoints:
     web:

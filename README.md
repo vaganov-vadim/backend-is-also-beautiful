@@ -19,3 +19,13 @@
 Картинка для привлечения внимания :)
 
 ![performance.png](static/performance.png)
+
+### Попробовать поиграться локально
+
+```bash
+docker compose -f local/docker-compose.yml up
+```
+
+```bash
+./gradlew bootRun
+```
