@@ -243,7 +243,7 @@ done
 Если у вас остались вопросы или вы хотите обсудить тему мониторинга более подробно, я всегда рад пообщаться.
 Спасибо за внимание!
 
-# Полезные источники
+## Полезные источники
 
 * [Официальная дока Micrometer](https://docs.micrometer.io/micrometer/reference/)
 * [Официальная дока Prometheus](https://prometheus.io/docs/introduction/overview/)
