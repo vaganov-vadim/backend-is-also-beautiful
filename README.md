@@ -59,6 +59,8 @@
 
 ### Получаем данные о состоянии приложения в моменте времени
 
+Пререквизиты: [Docker](https://github.com/docker), [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
+
 Всё придумано до нас, нам нужен простой и понятный инструмент - например, [micrometer](https://micrometer.io/) или
 аналог, если у вас не java/kotlin. И интегрируем с /actuator.
 
