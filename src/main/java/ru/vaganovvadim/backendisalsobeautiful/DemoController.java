@@ -27,9 +27,9 @@ public class DemoController {
         // Случайно возвращаем ошибку
         if (Math.random() < 0.2) {
             errorCounter.increment();
-            throw new RuntimeException("Произошла серьёзная ошибка");
+            throw new RuntimeException("Произошла серьёзная ошибка, поэтому ты инкрементировал метрику ошибок");
         }
 
-        return "Привет! Это демонстрационный эндпоинт";
+        return "Привет! Это демонстрационный эндпоинт, ты инкрементировал метрику запросов";
     }
 }
